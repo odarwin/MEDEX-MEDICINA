@@ -1,0 +1,80 @@
+﻿@model ProyectoMedexcard.Models.Empleados.EmpleadoViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Empleado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<input type="hidden" asp-for="Em_Id" />
+            <div class="form-group">
+                <label asp-for="Em_IdPersona" class="control-label"></label>
+                <select asp-for="Em_IdPersona" class="form-control" asp-items="ViewBag.Em_IdPersona"></select>
+                <span asp-validation-for="Em_IdPersona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Em_FechaCreacion" class="control-label"></label>
+                <input asp-for="Em_FechaCreacion" class="form-control" />
+                <span asp-validation-for="Em_FechaCreacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Em_FechaModifica" class="control-label"></label>
+                <input asp-for="Em_FechaModifica" class="form-control" />
+                <span asp-validation-for="Em_FechaModifica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Em_FechaElimina" class="control-label"></label>
+                <input asp-for="Em_FechaElimina" class="form-control" />
+                <span asp-validation-for="Em_FechaElimina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Em_UsuCreacion" class="control-label"></label>
+                <input asp-for="Em_UsuCreacion" class="form-control" />
+                <span asp-validation-for="Em_UsuCreacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Em_UsuModifica" class="control-label"></label>
+                <input asp-for="Em_UsuModifica" class="form-control" />
+                <span asp-validation-for="Em_UsuModifica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Em_UsuElimina" class="control-label"></label>
+                <input asp-for="Em_UsuElimina" class="form-control" />
+                <span asp-validation-for="Em_UsuElimina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Em_Rol" class="control-label"></label>
+                <input asp-for="Em_Rol" class="form-control" />
+                <span asp-validation-for="Em_Rol" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Em_Activo" /> @Html.DisplayNameFor(model => model.Em_Activo)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Em_Eliminado" /> @Html.DisplayNameFor(model => model.Em_Eliminado)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>*@
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

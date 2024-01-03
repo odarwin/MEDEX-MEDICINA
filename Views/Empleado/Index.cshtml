@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ProyectoMedexcard.Entities.Empleado>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_FechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_FechaModifica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_FechaElimina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_UsuCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_UsuModifica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_UsuElimina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_Rol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_Activo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_Eliminado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Em_IdPersonaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_FechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_FechaModifica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_FechaElimina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_UsuCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_UsuModifica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_UsuElimina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_Rol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_Activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_Eliminado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Em_IdPersonaNavigation.Per_Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Em_Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Em_Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Em_Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
